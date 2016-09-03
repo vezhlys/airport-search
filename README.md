@@ -10,7 +10,7 @@ mvn spring-boot:run
 ##Access
 http://localhost:9090/
 ##Endpoints
-http://localhost:9090/fares - search fares
-http://localhost:9090/airports - filter airports
-http://localhost:9090/dashboard - metrics dashboard
-http://localhost:9090/metrics - metrics json
+- /fares - search fares
+- /airports - filter airports
+- /dashboard - metrics dashboard
+- /metrics - metrics json
