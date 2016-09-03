@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:include="header::header('KLM fares')" />
+<script type="text/javascript" th:src="@{/js/fares.js}"></script>
+</head>
+<body>
+	<div class="container">
+		<nav th:replace="menu::menu('fares')"></nav>
+
+		<div class="page-header">
+			<h1>Find your flight</h1>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<form id="fareSearchForm" class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-3"></div>
+						<label for="origin" class="col-sm-2 control-label"><span
+							class="glyphicon glyphicon-search" title="Origin"
+							style="padding-right: 5px;" aria-hidden="false"></span>From</label>
+						<div class="col-sm-2">
+							<input name="origin" id="fareSearchOrigin" type="text"
+								autocomplete="off" class="form-control input-sm"
+								placeholder="Type to search" required="required" />
+						</div>
+						<div class="col-sm-5"></div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3"></div>
+						<label for="origin" class="col-sm-2 control-label"><span
+							class="glyphicon glyphicon-search" title="Destination"
+							style="padding-right: 5px;" aria-hidden="false"></span>To</label>
+						<div class="col-sm-2">
+							<input name="destination" id="fareSearchDestination" type="text"
+								autocomplete="off" class="form-control input-sm"
+								placeholder="Type to search" required="required" />
+						</div>
+						<div class="col-sm-5"></div>
+					</div>
+					<p class="text-center">
+						<button type="submit" id="fareSearch"
+							data-loading-text="Searching..." class="btn btn-primary">
+							Search</button>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="sameOriginDestinationModal" tabindex="-1"
+		role="dialog" aria-labelledby="sameOriginDestinationModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title text-danger">Info</h4>
+				</div>
+				<div class="modal-body text-danger">Origin and destination can
+					not be the same.</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<th:block id="menu-items-section" th:remove="all">
+		<li class="active"><a href="#">Fares<span class="sr-only">(current)</span></a></li>
+		<li><a href="/airports">Airports</a></li>
+	</th:block>
+</body>
+</html>

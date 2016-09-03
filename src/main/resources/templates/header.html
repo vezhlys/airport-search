@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="header (title)">
+	<title th:text="${title}">KLM</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel='stylesheet' href='/webjars/bootstrap/css/bootstrap.min.css'></link>
+	<link rel='stylesheet'
+		href='/webjars/font-awesome/css/font-awesome.min.css'></link>
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery/dist/jquery.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/Bootstrap-3-Typeahead/bootstrap3-typeahead.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/jquery-validation/jquery.validate.min.js}"></script>
+	<script type="text/javascript"
+		th:src="@{/webjars/mustachejs/mustache.min.js}"></script>
+</th:block>
+</html>

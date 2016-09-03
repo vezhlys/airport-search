@@ -1,0 +1,9 @@
+klm:
+  fares:
+    client:
+      id: klm-fares
+      clientId: travel-api-client
+      clientSecret: psw
+      accessTokenUri: http://localhost:8080/oauth/token
+    endpoints:
+      serviceUrl: http://localhost:8080

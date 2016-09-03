@@ -1,0 +1,21 @@
+<div class="panel panel-success">
+  <div class="panel-heading">Available fare</div>
+  <div class="panel-body">
+	  <table class="table">
+		<thead>
+			<tr>
+				<th>Origin</th>
+				<th>Destination</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{origin.code}} - {{origin.name}}</td>
+				<td>{{destination.code}} - {{destination.name}}</td>
+				<td>{{fare.amount}}&nbsp;{{fare.currency}}</td>
+			</tr>
+		</tbody>
+	  </table>
+  </div>
+</div>

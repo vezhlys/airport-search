@@ -1,0 +1,18 @@
+{{#airports}}
+<tr>
+	<td>{{code}}</td>
+	<td>{{name}}</td>
+	<td>{{description}}</td>
+	{{#coordinates}}
+	<td>{{latitude}} / {{longitude}}</td>
+	{{/coordinates}}
+	{{^coordinates}}
+	<td></td>
+	{{/coordinates}}
+</tr>
+{{/airports}}
+{{^airports}}
+<tr>
+	<td colspan="4">No airports found. Please redefine your search term.</td>
+</tr>
+{{/airports}}

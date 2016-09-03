@@ -1,0 +1,14 @@
+<div class="span12">
+	<h3>Counters</h3>
+	{{#counters}}
+	<div class="text-capitalize">{{name}}: {{value}}</div>
+	{{/counters}} {{^counters}}
+	<div class="">No counters available.</div>
+	{{/counters}}
+	<h3>Responses</h3>
+	{{#responses}}
+	<div class="text-capitalize">{{name}}: {{value}}</div>
+	{{/responses}} {{^responses}}
+	<div class="row">No response time data available.</div>
+	{{/responses}}
+</div>
